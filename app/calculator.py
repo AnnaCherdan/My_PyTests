@@ -1,6 +1,7 @@
 class Calculator:
    def multiply(self, x, y):
-       return x * y
+       c = x * y
+       return c
 
    def division(self, x, y):
        return x / y
