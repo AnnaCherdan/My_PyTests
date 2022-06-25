@@ -5,8 +5,8 @@ mcl = APIMoyClass()
 
 
 class TestMoyCl:
-    def __init__(self):
-        self.moyCl = APIMoyClass
+    # def setup(self):
+    #     self.moyCl = APIMoyClass
 
     def test_get_filials(self):
         status, result = mcl.get_filials()
