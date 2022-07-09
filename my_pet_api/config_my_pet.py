@@ -3,7 +3,9 @@ import requests
 
 
 @pytest.fixture
-def key_param():
-    res = requests.get(url='https://petfriends.skillfactory.ru/login',
-                       data={'email': 'anchetest@mail.ru', 'password': 'ljkmvtyf'})
-    return res
+def log_key_param():
+    header = {"accept": "application/json", "email": "anchetest@mail.ru", "password": "ljkmvtyf"}
+    logo_key = requests.post(url='https://petfriends.skillfactory.ru/login',
+                             data=header)
+    return logo_key
+
