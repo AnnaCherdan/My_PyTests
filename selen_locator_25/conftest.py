@@ -23,13 +23,7 @@ def driver(request):
 #     cr_op.add_argument('--window-size == 800, 600')
 #     return cr_op
 
-
 @pytest.fixture
-def get_webdriver(get_chrome_options):
-    driver = webdriver.Chrome('D:\\AllDoc\\AnnCherdan\\Python\\chromedriver.exe', options=chrome_options)
-    return driver, chrome_options
-
-
-
-
-
+def driver_logo():
+    driver = webdriver.Chrome('D:\\AllDoc\\AnnCherdan\\Python\\chromedriver.exe')
+    driver.get('https://petfriends.skillfactory.ru/login')
