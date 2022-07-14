@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+import data_base
 
 
 @pytest.fixture
@@ -12,5 +13,16 @@ def driver_labirint(request):
 @pytest.fixture(autouse=True)
 def driver_pikabu(request):
     driver_pik = webdriver.Chrome('D:\\AllDoc\\AnnCherdan\\Python\\chromedriver.exe')
-    driver_pik.get('https://pikabu.ru/')
+    # driver_pik.get('https://pikabu.ru/')
     return driver_pik
+
+
+@pytest.fixture
+def driver_friends(request):
+    drifriend = webdriver.Chrome('D:\\AllDoc\\AnnCherdan\\Python\\chromedriver.exe')
+    drifriend.get('https://petfriends.skillfactory.ru/login')
+    # drifriend.find_element_by_xpath('//input[@id="email"]').send_keys('anchetest@mail.ru')
+    # drifriend.find_element_by_xpath('//*[@id="pass"]').send_keys('ljkmvtyf')
+    # drifriend.find_element_by_xpath('//body/div[1]/div[1]/form[1]/div[3]/button[1]').submit()
+    # drifriend.find_element_by_xpath('//*[@id="navbarNav"]/ul[1]/li[1]/a[1]').click()
+    return drifriend
